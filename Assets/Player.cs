@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         //initial position of the player 
-        transform.position = new Vector3(0, 0, 0);
+        transform.position = new Vector3(0, 15, 0);
         rb = GetComponent<Rigidbody2D>();
         
     }

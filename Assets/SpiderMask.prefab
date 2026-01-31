@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8188055894161058147}
   - component: {fileID: -8022401186959038431}
   - component: {fileID: -7760182128017960159}
+  - component: {fileID: 2947268382145743877}
   m_Layer: 0
   m_Name: SpiderMask
-  m_TagString: Untagged
+  m_TagString: Mask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,3 +167,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2947268382145743877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190555766703598042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca033cc55368e94cba63a05d380cf41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpiderMask
+  icon: {fileID: 0}

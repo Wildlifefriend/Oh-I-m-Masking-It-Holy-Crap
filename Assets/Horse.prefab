@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8171657397682377766}
   - component: {fileID: -907880223161328134}
   - component: {fileID: 1320214499594602894}
+  - component: {fileID: -4222559110923174482}
   m_Layer: 0
   m_Name: Horse
-  m_TagString: Untagged
+  m_TagString: Mask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,3 +167,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4222559110923174482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959966005305020672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64da4282b0086c449a4835ab61e0ffeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HorseMask
+  icon: {fileID: 0}

@@ -16,13 +16,15 @@ public class Player : MonoBehaviour
 
     private bool canJump = false;
 
+    public static LinkedList<Mask> maskList; 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //initial position of the player 
         transform.position = new Vector3(0, 0, 0);
         rb = GetComponent<Rigidbody2D>();
-        
+        maskList = new LinkedList<Mask>();
     }
 
     // Update is called once per frame
@@ -66,4 +68,5 @@ public class Player : MonoBehaviour
             canJump = true;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         //initial position of the player 
-        transform.position = new Vector3(0, 15, 0);
+        transform.position = GetComponent<Transform>().position;
         rb = GetComponent<Rigidbody2D>();
         maskList = new LinkedList<Mask>();
     }

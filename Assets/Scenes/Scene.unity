@@ -65340,6 +65340,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6643195863463509033, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1254881985}
+    - target: {fileID: -6643195863463509033, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
+      propertyPath: dashTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -6643195863463509033, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
+      propertyPath: dashForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -6643195863463509033, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
       propertyPath: jumpHeight
       value: 9
       objectReference: {fileID: 0}
@@ -65423,6 +65435,11 @@ PrefabInstance:
 --- !u!4 &1027156291 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3507219353943240775, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
+  m_PrefabInstance: {fileID: 879356364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1254881985 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3140123351272486897, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
   m_PrefabInstance: {fileID: 879356364}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1578497617

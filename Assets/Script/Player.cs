@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
             lastDirection = 1;
         }
 
+       
         rb.linearVelocity = new Vector2(
             moveX * speed,
             rb.linearVelocity.y

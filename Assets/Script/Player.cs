@@ -36,6 +36,10 @@ public class Player : MonoBehaviour
     private bool canDash = true;
     private bool isDashing = false;
 
+    private int maxJump = 1;
+    private int jumpRemaining; 
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -77,28 +81,41 @@ public class Player : MonoBehaviour
             rb.linearVelocity.y
         );
 
-        if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpRemaining > 0)
         {
+            jumpRemaining--;
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-            canJump = false;
+            
         }
     }
 
     void performAction()
     {
-        
-            //depends on the mask type perform the following actions 
-        Mask curr = activeMask;
 
-        if (curr is HorseMask)
-        {
+            //depends on the mask type perform the following actions 
+            Mask curr = activeMask;
+
+            if (curr is HorseMask)
+            {
+                Debug.Log("Current is horse");
+                maxJump = 1;
                 if (Input.GetMouseButtonDown(1) && canDash)
                 {
+                    Debug.Log("Currently dashing");
                     StartCoroutine(HorseDash());
-                   
+
                 }
-        }
+            }
+
+            if (curr is FrogMask)
+            {
+                Debug.Log("Current is frog");
+                maxJump = 2;
+
+            }
+        
     }
+
 
     System.Collections.IEnumerator HorseDash()
     {
@@ -135,14 +152,18 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor") && !isDashing)
         {
             canDash = true;
+            maxJump = 1;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (collision.gameObject.CompareTag("Floor"))
         {
-            canJump = true;
+            jumpRemaining = maxJump;
+            canDash = true;
+        
         }
     }
 

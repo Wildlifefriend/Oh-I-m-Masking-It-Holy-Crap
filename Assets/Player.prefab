@@ -181,8 +181,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   speed: 5
-  jumpHeight: 6
-  rb: {fileID: 0}
+  jumpHeight: 9
+  dashForce: 15
+  rb: {fileID: 3140123351272486897}
+  dashTime: 0.25
+  activeMask: {fileID: 0}
 --- !u!114 &3606865289768483055
 MonoBehaviour:
   m_ObjectHideFlags: 0

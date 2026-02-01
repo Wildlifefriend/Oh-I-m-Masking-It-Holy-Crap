@@ -301965,6 +301965,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6643195863463509033, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1254881985}
+    - target: {fileID: -6643195863463509033, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
+      propertyPath: dashTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -6643195863463509033, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
+      propertyPath: dashForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -6643195863463509033, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
       propertyPath: jumpHeight
       value: 9
       objectReference: {fileID: 0}
@@ -302050,6 +302062,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3507219353943240775, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
   m_PrefabInstance: {fileID: 879356364}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+--- !u!50 &1254881985 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3140123351272486897, guid: 118b213c786df8f4dbcdcbfb2cd02edf, type: 3}
+  m_PrefabInstance: {fileID: 879356364}
+  m_PrefabAsset: {fileID: 0}
+=======
 --- !u!1001 &1247693181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302167,6 +302186,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2fd3dd36d19a084490efa6d56bd9bb8, type: 3}
+>>>>>>> 751c75936224b16365d4f3e0935a946cc1d762f3
 --- !u!1 &1578497617
 GameObject:
   m_ObjectHideFlags: 0

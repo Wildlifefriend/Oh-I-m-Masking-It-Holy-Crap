@@ -5,22 +5,29 @@ using UnityEngine;
 
 public class AreaTransition : MonoBehaviour
 {
+    [SerializeField]
     private CameraController cam;
-    public Vector2 newMinPos, newMaxPos;
-    public Vector3 movePlayer;
-    void Start()
-    {
-        cam = Camera.main.GetComponent<CameraController>();
-    }
+ 
+    [SerializeField]
+    private Vector2 newMinPos, newMaxPos;
+    [SerializeField]
+    private bool canTeleport;
+    [SerializeField]
+    private Transform newLocation;
 
     private async void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && canTeleport)
         {
+            Debug.Log("Teleporting player");
             await Task.Delay(250);
             cam.minPos = newMinPos;
             cam.maxPos = newMaxPos;
-            other.transform.position += movePlayer;
+
+            Vector3 pos = other.transform.position;
+            pos.x = newLocation.position.x;
+            pos.y = newLocation.position.y;
+            other.transform.position = pos;
         }
     }
 }

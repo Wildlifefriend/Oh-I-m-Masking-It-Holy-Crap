@@ -91,9 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e295528b3834374e9eafae45c8bb738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
   newMinPos: {x: 0, y: 0}
   newMaxPos: {x: 0, y: 0}
-  movePlayer: {x: 0, y: 0, z: 0}
+  newLocation: {fileID: 2324492532356814372}
 --- !u!1 &4075436607789458310
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,9 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e295528b3834374e9eafae45c8bb738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
   newMinPos: {x: 0, y: 0}
   newMaxPos: {x: 0, y: 0}
-  movePlayer: {x: 0, y: 0, z: 0}
+  newLocation: {fileID: 6225762483868452546}
 --- !u!1 &5689037209182867583
 GameObject:
   m_ObjectHideFlags: 0

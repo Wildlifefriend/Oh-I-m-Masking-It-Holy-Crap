@@ -4,4 +4,10 @@ public class HorseMask : Mask
 {
     
 
+    void Start()
+    {
+       
+    }
+
+
 }

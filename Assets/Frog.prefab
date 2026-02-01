@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2980028806747949892}
   - component: {fileID: 9091906025727487503}
   - component: {fileID: 8748730633779409391}
+  - component: {fileID: -7406717192588992528}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Mask
@@ -83,12 +84,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdeedb9d71eb0fb45b391e8340809cc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.625, y: 0.5625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -158,11 +159,24 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.625, y: 0.5625}
+    newSize: {x: 0.625, y: 0.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-7406717192588992528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2491011832606246464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93926ee6c45378f41b57ec8a677e9fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FrogMask
+  icon: {fileID: 21300000, guid: fdeedb9d71eb0fb45b391e8340809cc8, type: 3}

@@ -6,14 +6,11 @@ public class Mask : MonoBehaviour
     protected float jumpHeight; 
     protected float movementSpeed;
 
+ 
+    [SerializeField]
     public Sprite icon;
 
-    public Sprite MaskIcon => icon; 
-
-    protected void giveAbility()
-    {
-        return;
-    }
+    public Sprite MaskIcon => icon;
 
    
 
@@ -22,11 +19,13 @@ public class Mask : MonoBehaviour
         //if it hit the player then 
         if (collision.gameObject.CompareTag("Player"))
         {
-            
-            
+            Player p = collision.gameObject.GetComponent<Player>();
+
+            p.pickUpMask(this); 
+
             addMask(this, Player.maskList);
-            //destory the object
-            Destroy(gameObject);
+            //Hide the object
+            HideObject();
 
             printll(Player.maskList);
             
@@ -39,6 +38,11 @@ public class Mask : MonoBehaviour
         
     }
 
+    void HideObject()
+    {
+        //GetComponent<Renderer>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
+    }
     void printll(LinkedList<Mask> ll)
     {
         foreach(Mask i in ll)

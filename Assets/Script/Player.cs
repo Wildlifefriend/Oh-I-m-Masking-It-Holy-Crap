@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
 
     //how fast the player moves 
     [SerializeField]
+    private Animator animator;
+
+    [SerializeField]
     private float speed = 5f;
 
     [SerializeField]
@@ -40,6 +43,8 @@ public class Player : MonoBehaviour
     private int jumpRemaining; 
 
 
+    private SpriteRenderer spriteRenderer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,6 +52,7 @@ public class Player : MonoBehaviour
         transform.position = GetComponent<Transform>().position;
         rb = GetComponent<Rigidbody2D>();
         maskList = new LinkedList<Mask>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -68,11 +74,19 @@ public class Player : MonoBehaviour
         {
             moveX = -1f;
             lastDirection = -1;
+            animator.SetBool("Walk", true);
+            spriteRenderer.flipX = true;
         }
         else if (Input.GetKey(KeyCode.D))
         {
             moveX = 1f;
             lastDirection = 1;
+            animator.SetBool("Walk", true);
+            spriteRenderer.flipX = false;
+        }
+        else
+        {
+            animator.SetBool("Walk", false);
         }
 
        
@@ -85,7 +99,8 @@ public class Player : MonoBehaviour
         {
             jumpRemaining--;
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-            
+            animator.SetBool("Jump", canJump);
+            canJump = false;
         }
     }
 
@@ -121,6 +136,7 @@ public class Player : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+        animator.SetBool("Dash", isDashing);
         rb.linearVelocity = new Vector2(lastDirection * dashForce, rb.linearVelocity.y);
 
         yield return new WaitForSeconds(dashTime); // dash duration
@@ -128,6 +144,7 @@ public class Player : MonoBehaviour
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
         isDashing = false;
+        animator.SetBool("Dash", isDashing);
     }
 
     // mask Cycling and Selection
@@ -161,6 +178,8 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Floor"))
         {
+            canJump = true;
+            animator.SetBool("Jump", !canJump);
             jumpRemaining = maxJump;
             canDash = true;
         
@@ -222,6 +241,18 @@ public class Player : MonoBehaviour
     private void SelectMask()
     {
         activeMask = currentActiveNode.Value;
+        if (activeMask is HorseMask)
+        {
+            animator.SetInteger("Mask", 1);
+        }
+        else if (activeMask is FrogMask)
+        {
+            animator.SetInteger("Mask", 2);
+        }
+        else
+        {
+            animator.SetInteger("Mask", 0);
+        }
     }
 
 

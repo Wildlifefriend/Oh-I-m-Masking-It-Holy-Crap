@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7810331376874579614}
   - component: {fileID: 4169219118504078798}
   - component: {fileID: -4665589168513408504}
+  - component: {fileID: 1770734789087573570}
+  - component: {fileID: 7829563438277632249}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Mask
@@ -166,3 +168,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1770734789087573570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4982147706623392186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22838efbb9fd344fa1cd62d52189051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActionManager
+--- !u!114 &7829563438277632249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4982147706623392186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ac04ec5858f904abf2389e34a9b1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragonMask
+  icon: {fileID: 0}
